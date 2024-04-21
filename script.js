@@ -1,3 +1,4 @@
+// algoritma seach
 const searchInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-button');
 
@@ -7,6 +8,10 @@ searchButton.addEventListener('click', function() {
     
     if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' }); // Mengalihkan halaman ke elemen target dengan efek smooth scroll
+        targetElement.style.color = '#22c55e'; // Ubah warna teks elemen menjadi biru
+        setTimeout(function() {
+            targetElement.style.color = ''; // Menghapus properti warna untuk kembali ke warna semula setelah 2 detik
+        }, 2000);
     } else {
         console.log('Elemen tidak ditemukan');
     }
