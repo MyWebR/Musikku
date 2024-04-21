@@ -1,3 +1,29 @@
+const searchInput = document.querySelector('.search-input');
+const searchButton = document.querySelector('.search-button');
+
+searchButton.addEventListener('click', function() {
+    const searchText = searchInput.value.toLowerCase(); // Ambil teks dari input dan konversikan ke huruf kecil
+    const targetElement = findElementByInitial(searchText);
+    
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' }); // Mengalihkan halaman ke elemen target dengan efek smooth scroll
+    } else {
+        console.log('Elemen tidak ditemukan');
+    }
+});
+
+function findElementByInitial(initial) {
+    const h2Elements = document.querySelectorAll('h2[id]');
+    for (const element of h2Elements) {
+        const idText = element.id.toLowerCase();
+        if (idText.startsWith(initial)) {
+            return element;
+        }
+    }
+    return null;
+}
+
+
 // musik 1---------------------------------------------
 const playButton = document.getElementById('playButton');
 const audioPlayer = document.getElementById('audioPlayer');

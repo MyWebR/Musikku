@@ -11,6 +11,37 @@ body {
   color: #f8fafc;
 }
 
+/* cari musik */
+.search-container {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1; /* Input akan mengisi sisa ruang yang tersedia */
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
 .playlist {
   margin: 15px;
 }
@@ -23,6 +54,7 @@ body {
   border-radius: 35px;
   margin-bottom: 15px;
   background-color: rgba(0, 0, 0, 0.614);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* profil musik */
@@ -49,6 +81,7 @@ body {
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 20px;
+  
 }
 
 .pencipta-musik p {
@@ -68,7 +101,7 @@ body {
 }
 
 #spotify {
-     margin-left: 10px;
+  margin-left: 10px;
   height: 40px;
 }
 
