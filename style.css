@@ -1,0 +1,245 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* end font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #f8fafc;
+}
+
+.playlist {
+  margin: 15px;
+}
+
+/* bg musik */
+.musik {
+  height: 100%;
+  width: auto;
+  padding: 20px;
+  border-radius: 35px;
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.614);
+}
+
+/* profil musik */
+.profil-musik img {
+  position: absolute;
+  z-index: 1; /* Atur nilai z-index yang lebih tinggi */
+  height: 100px;
+}
+
+#proffil {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitam {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
+
+/* nama musik */
+.nama-musik {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.pencipta-musik p {
+  margin-top: -15px;
+}
+
+.nama-musik img {
+  height: 35px;
+}
+
+/* icon play musik */
+.play-musik {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#spotify {
+     margin-left: 10px;
+  height: 40px;
+}
+
+/* seek bar */
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #f0f0f03d;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.progress-duration-left,
+.progress-duration-right {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-left {
+  left: 0;
+}
+
+.progress-duration-right {
+  right: 0;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicator {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+/* button musik */
+button {
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s ease; /* Menambahkan transisi untuk perubahan warna latar belakang selama 0.3 detik dengan efek yang mudah */
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.063);
+}
+
+.play-musik img {
+  height: 55px;
+  width: auto;
+}
+
+/* musik 22222222222222222222222222222222222222222222222222222 */
+.progress-duration-left2,
+.progress-duration-right2 {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-left2 {
+  left: 0;
+}
+
+.progress-duration-right2 {
+  right: 0;
+}
+
+.progress-bar2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicator2 {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+#proffil2 {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitam2 {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
+
+/* musik 3333333333333333333333333333333333333333333333333333333 */
+.progress-duration-left3,
+.progress-duration-right3 {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-left3 {
+  left: 0;
+}
+
+.progress-duration-right3 {
+  right: 0;
+}
+
+.progress-bar3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicator3 {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+#proffil3 {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitam3 {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
