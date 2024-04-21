@@ -53,7 +53,12 @@ audioPlayer.addEventListener('ended', function() {
     progressIndicator.style.left = '0%'; // Mengatur posisi titik besar kembali ke awal saat musik selesai
     progressDurationLeft.textContent = '0:00';
     progressDurationRight.textContent = '0:00';
+    
+    // Simulasikan klik pada tombol dengan ID playButton2 (lanjut ke musik berikutnya)
+    const playButton2 = document.getElementById('playButton2');
+    playButton2.click();
 });
+
 
 // musik 2---------------------------------------------
 const playButton2 = document.getElementById('playButton2');
@@ -111,6 +116,10 @@ audioPlayer2.addEventListener('ended', function() {
     progressIndicator2.style.left = '0%'; // Mengatur posisi titik besar kembali ke awal saat musik selesai
     progressDurationLeft2.textContent = '0:00';
     progressDurationRight2.textContent = '0:00';
+
+    // Simulasikan klik pada tombol dengan ID playButton3 (lanjut ke musik berikutnya)
+    const playButton3 = document.getElementById('playButton3');
+    playButton3.click();
 });
 
 
