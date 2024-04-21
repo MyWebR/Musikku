@@ -85,6 +85,11 @@ function updateProgressBar2() {
     progressIndicator2.style.left = progress + '%'; // Atur posisi titik besar sesuai dengan progress
     progressDurationLeft2.textContent = formatTime(audioPlayer2.currentTime);
     progressDurationRight2.textContent = formatTime(audioPlayer2.duration - audioPlayer2.currentTime);
+
+         // Mengatur rotasi gambar piringan-hitam berdasarkan progres musik
+         const rotation = progress * 200.2; // Mengurangi faktor skala untuk mempercepat putaran
+         const piringanHitam2 = document.getElementById('piringan-hitam2');
+         piringanHitam2.style.transform = `rotate(${rotation}deg)`;
     
     if (!audioPlayer2.paused) {
         requestAnimationFrame(updateProgressBar2);
@@ -97,6 +102,8 @@ function formatTime(seconds) {
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }
+
+
 
 audioPlayer2.addEventListener('ended', function() {
     playButton2.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
@@ -137,6 +144,11 @@ function updateProgressBar3() {
     progressIndicator3.style.left = progress + '%'; // Atur posisi titik besar sesuai dengan progress
     progressDurationLeft3.textContent = formatTime(audioPlayer3.currentTime);
     progressDurationRight3.textContent = formatTime(audioPlayer3.duration - audioPlayer3.currentTime);
+
+     // Mengatur rotasi gambar piringan-hitam berdasarkan progres musik
+     const rotation = progress * 200.2; // Mengurangi faktor skala untuk mempercepat putaran
+     const piringanHitam3 = document.getElementById('piringan-hitam3');
+     piringanHitam3.style.transform = `rotate(${rotation}deg)`;
     
     if (!audioPlayer3.paused) {
         requestAnimationFrame(updateProgressBar3);
