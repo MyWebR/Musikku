@@ -211,7 +211,7 @@ const lyrics3 = [
     { time: 82, text: "Amajor sacrifice, but clueless at the time" },
     { time: 85, text: "Enter, Caroline" },
     { time: 90, text: "'Just trust me, you'll be fine'" },
-    { time: 102, text: "And when I'm back in Chicago, I feel it" },
+    { time: 102, text: "And when I'm back in Chicago, I feel it, Another version of me, I was in it" },
     { time: 106, text: "I wave goodbye to the end off beginning" },
     { time: 112, text: "(Goodbye, goodbye, goodbye, goodbye)" },
     { time: 118, text: "You take the man out of the city, not the cyty out the man" },
