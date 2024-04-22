@@ -85,6 +85,12 @@ input {
   font-weight: bold;
 }
 
+#semua:hover {
+  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
 
 #indri {
   padding: 10px;
@@ -95,7 +101,8 @@ input {
 
 #indri:hover {
   box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
-  background-color: rgb(52, 52, 52);
+  background-color: #22c55e;
+  color: black;
 }
 
 #arya {
@@ -108,7 +115,8 @@ input {
 
 #arya:hover {
   box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
-  background-color: rgb(52, 52, 52);
+  background-color: #22c55e;
+  color: black;
 }
 
 /* bg musik */
