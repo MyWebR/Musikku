@@ -12,6 +12,22 @@ body {
   background-color: #000000f0;
 }
 
+.verifed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#verifed {
+  margin-left: 3px;
+  margin-top: -25px;
+}
+
+#verifed img {
+  height: 18px;
+  width: auto;
+}
+
 /* cari musik */
 .search-container {
   margin: 15px;
