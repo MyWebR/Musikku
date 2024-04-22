@@ -19,12 +19,12 @@ JIKA CLASS/VARIABLE TIDAK ADA NOMOR 1 JANGAN DI HAPUS/DITAMBAH HRURUF
         <div class="nama-musik">
           <div class="pencipta-musik">
             <a
-              href="https://open.spotify.com/track/6dBUzqjtbnIa1TwYbyw5CM?si=b71885f7ddde4a0a"
+              href="https://open.spotify.com/track/0ug5NqcwcFR2xrfTkc7k8e?si=5080b5475e544862"
             >
               <h2 id="lovers rock">Style</h2>
             </a>
             <a
-              href="https://open.spotify.com/artist/0Y6dVaC9DZtPNH4591M42W?si=DysqKOCaT_GVy6nzJVMTAg"
+              href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02?si=riOZkRbKRYiicdJ9kBPxcA"
             >
               <p>Taylor Swift</p>
             </a>
@@ -38,7 +38,7 @@ JIKA CLASS/VARIABLE TIDAK ADA NOMOR 1 JANGAN DI HAPUS/DITAMBAH HRURUF
               <img src="image/iocn/play.png" alt="" />
             </button>
             <a
-              href="https://open.spotify.com/track/6dBUzqjtbnIa1TwYbyw5CM?si=b71885f7ddde4a0a"
+              href="https://open.spotify.com/track/0ug5NqcwcFR2xrfTkc7k8e?si=5080b5475e544862"
             >
               <img src="image/profil music/spotify.png" alt="" id="spotify1" />
             </a>
