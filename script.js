@@ -36,7 +36,8 @@ const progressBar = document.querySelector('.progress-bar');
 const progressIndicator = document.querySelector('.progress-indicator');
 const progressDurationLeft = document.querySelector('.progress-duration-left');
 const progressDurationRight = document.querySelector('.progress-duration-right');
-const lyricsContainer = document.getElementById('lyricsContainer');
+const spotifyImage = document.getElementById('spotify');
+
 
 const lyrics = [
     { time: 4, text: "Lirik" },
@@ -52,11 +53,14 @@ playButton.addEventListener('click', function() {
     if (audioPlayer.paused) {
         audioPlayer.play();
         playButton.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
+        spotifyImage.src = 'image/profil music/spotify.gif';
         updateProgressBar();
         displayLyrics();
     } else {
         audioPlayer.pause();
         playButton.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
+        spotifyImage.src = 'image/profil music/spotify.png';
+
         clearTimeout(timeoutId); // Menghentikan timeout saat audio dijeda
     }
 });
@@ -114,6 +118,7 @@ audioPlayer.addEventListener('ended', function() {
     
     // Simulasikan klik pada tombol dengan ID playButton2 (lanjut ke musik berikutnya)
     const playButton2 = document.getElementById('playButton2');
+    piringanHitam2.style.marginLeft = '-25px';
     playButton2.click();
 });
 
@@ -128,21 +133,106 @@ const progressIndicator2 = document.querySelector('.progress-indicator2');
 const progressDurationLeft2 = document.querySelector('.progress-duration-left2');
 const progressDurationRight2 = document.querySelector('.progress-duration-right2');
 const piringanHitam2 = document.getElementById('piringan-hitam2');
+const spotifyImage2 = document.getElementById('spotify2');
+const showLirikButton2 = document.getElementById('showLirik2');
+const lyricsContainer2 = document.getElementById('lyricsContainer2');
+
+// buton show lirik
+showLirikButton2.addEventListener('click', function() {
+    if (lyricsContainer2.style.display === 'none') {
+        lyricsContainer2.style.display = 'block'; // Tampilkan elemen lirik saat tombol ditekan
+    } else {
+        lyricsContainer2.style.display = 'none'; // Sembunyikan elemen lirik saat tombol ditekan kembali
+    }
+});
+
+// lirik
+const lyrics2 = [
+    { time: 10, text: "~Music~" },
+    { time: 15, text: "Are you sick of me?" },
+    { time: 17, text: "Would you like to be?" },
+    { time: 21, text: "I'm trying to tell you something" },
+    { time: 25, text: "Something that I already said" },
+    { time: 28, text: "~Music~" },
+    { time: 33, text: "You like a pretty boy" },
+    { time: 35, text: "With a pretty voice" },
+    { time: 39, text: "Who is trying to sell you something" },
+    { time: 45, text: "Something that you already said" },
+    { time: 48, text: "But if you're too drunk to drive" },
+    { time: 50, text: "And the music is right" },
+    { time: 52, text: "She might let you stay" },
+    { time: 54, text: "But just for the night" },
+    { time: 57, text: "And if she grabs for your hand" },
+    { time: 59, text: "And drags you analog" },
+    { time: 61, text: "She might want a kiss" },
+    { time: 63, text: "Before the end of this song" },
+    { time: 72, text: "Because love can burn lika a cigarette" },
+    { time: 80, text: "And leave you alone with nothing" },
+    { time: 83, text: "~Music~" },
+    { time: 87, text: "While the others tals" },
+    { time: 91, text: "We were listening to lovers rock" },
+    { time: 99, text: "In her bedroom" },
+    { time: 101, text: "In her bedroom x2" },
+    { time: 106, text: "And if you start to kiss" },
+    { time: 110, text: "And the record skips" },
+    { time: 113, text: "Flip it over" },
+    { time: 118, text: "And sit a litle closer" },
+    { time: 121, text: "But if you're too drunk to drive" },
+    { time: 124, text: "And the music is right" },
+    { time: 126, text: "She might let you stay" },
+    { time: 128, text: "But just for the night" },
+    { time: 130, text: "And if she grabs for your hand" },
+    { time: 133, text: "And drags you analog" },
+    { time: 135, text: "She might want a kiss" },
+    { time: 137, text: "Before the end of this song" },
+    { time: 145, text: "Because love can burn like a cigaratte" },
+    { time: 153, text: "And leave you alone with nothing" },
+    { time: 165, text: "~Music~" },
+    { time: 170, text: "Do-do, do-do-do-do-do x1" },
+    { time: 174, text: "Do-do, do-do-do-do-do x2" },
+    { time: 179, text: "Do-do, do-do-do-do-do x3" },
+    { time: 182, text: "Do-do, do-do-do-do-do x4" },
+    { time: 191, text: "Because love can burn like a cigarete" },
+    { time: 196, text: "And leave you alone with nothing" },
+    { time: 210, text: "And leave you alone with nothing" },
+
+    // Tambahkan lirik sesuai dengan durasi waktunya
+];
+
+let currentLyricIndex2 = 0;
+let timeoutId2;
+
+function displayLyrics2() {
+    const currentLyric2 = lyrics2[currentLyricIndex2];
+    if (currentLyric2) {
+        const timeRemaining2 = (currentLyric2.time - audioPlayer2.currentTime) * 1000;
+        timeoutId2 = setTimeout(function() {
+            lyricsContainer2.textContent = ''; // Menghapus teks lirik setelah jeda waktu tertentu
+            currentLyricIndex2++;
+            displayLyrics2(); // Lanjutkan ke lirik berikutnya
+        }, timeRemaining2); // Hitung jeda waktu sebelum memunculkan teks berikutnya
+        lyricsContainer2.textContent = currentLyric2.text; // Tampilkan teks lirik saat ini
+    }
+}
 
 playButton2.addEventListener('click', function() {
     if (audioPlayer2.paused) {
         audioPlayer2.play();
         playButton2.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
+        spotifyImage2.src = 'image/profil music/spotify.gif';
         updateProgressBar2();
         // Set margin left piringan-hitam2 menjadi 25px ketika audio dimainkan
         piringanHitam2.style.marginLeft = '25px';
+        displayLyrics2(); // Memulai menampilkan lirik
     } else {
         audioPlayer2.pause();
         playButton2.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
-        // Set margin left piringan-hitam2 menjadi -25px ketika audio di-pause
+        spotifyImage2.src = 'image/profil music/spotify.png';
         piringanHitam2.style.marginLeft = '-25px';
+        clearTimeout(timeoutId2); // Menghentikan timeout saat audio dijeda
     }
 });
+
 
 function updateProgressBar2() {
     const progress = (audioPlayer2.currentTime / audioPlayer2.duration) * 100;
@@ -179,6 +269,7 @@ audioPlayer2.addEventListener('ended', function() {
 
     // Simulasikan klik pada tombol dengan ID playButton3 (lanjut ke musik berikutnya)
     const playButton3 = document.getElementById('playButton3');
+    piringanHitam2.style.marginLeft = '-25px';
     playButton3.click();
 });
 
@@ -192,7 +283,19 @@ const progressDurationLeft3 = document.querySelector('.progress-duration-left3')
 const progressDurationRight3 = document.querySelector('.progress-duration-right3');
 const piringanHitam3 = document.getElementById('piringan-hitam3');
 const lyricsContainer3 = document.getElementById('lyricsContainer3');
+const showLirikButton = document.getElementById('showLirik3');
+const spotifyImage3 = document.getElementById('spotify3');
 
+// buton show lirik
+showLirikButton.addEventListener('click', function() {
+    if (lyricsContainer3.style.display === 'none') {
+        lyricsContainer3.style.display = 'block'; // Tampilkan elemen lirik saat tombol ditekan
+    } else {
+        lyricsContainer3.style.display = 'none'; // Sembunyikan elemen lirik saat tombol ditekan kembali
+    }
+});
+
+// lirik
 const lyrics3 = [
     { time: 4, text: "~Music~" },
 
@@ -230,12 +333,14 @@ playButton3.addEventListener('click', function() {
     if (audioPlayer3.paused) {
         audioPlayer3.play();
         playButton3.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
+        spotifyImage3.src = 'image/profil music/spotify.gif';
         piringanHitam3.style.marginLeft = '25px';
         updateProgressBar3();
         displayLyrics3();
     } else {
         audioPlayer3.pause();
         playButton3.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
+        spotifyImage3.src = 'image/profil music/spotify.png';
         piringanHitam3.style.marginLeft = '-25px';
         clearTimeout(timeoutId3); // Menghentikan timeout saat audio dijeda
     }
@@ -284,4 +389,5 @@ audioPlayer3.addEventListener('ended', function() {
     progressIndicator3.style.left = '0%'; // Mengatur posisi titik besar kembali ke awal saat musik selesai
     progressDurationLeft3.textContent = '0:00';
     progressDurationRight3.textContent = '0:00';
+
 });
