@@ -28,100 +28,112 @@ function findElementByInitial(initial) {
     return null;
 }
 
-
-// musik 1---------------------------------------------
-const playButton = document.getElementById('playButton');
-const audioPlayer = document.getElementById('audioPlayer');
-const progressBar = document.querySelector('.progress-bar');
-const progressIndicator = document.querySelector('.progress-indicator');
-const progressDurationLeft = document.querySelector('.progress-duration-left');
-const progressDurationRight = document.querySelector('.progress-duration-right');
-const spotifyImage = document.getElementById('spotify');
-const showLirikButton1 = document.getElementById('showLirik');
-const lyricsContainer = document.getElementById('lyricsContainer');
+// musik 11111111111111111111111111111111111111111111111
+const playButton1 = document.getElementById('playButton1');
+const audioPlayer1 = document.getElementById('audioPlayer1');
+const progressBar1 = document.querySelector('.progress-bar1');
+const progressIndicator1 = document.querySelector('.progress-indicator1');
+const progressDurationLeft1 = document.querySelector('.progress-duration-left1');
+const progressDurationRight1 = document.querySelector('.progress-duration-right1');
+const piringanHitam1 = document.getElementById('piringan-hitam1');
+const spotifyImage1 = document.getElementById('spotify1');
+const showLirikButton1 = document.getElementById('showLirik1');
+const lyricsContainer1 = document.getElementById('lyricsContainer1');
 
 // buton show judul lirik
 showLirikButton1.addEventListener('click', function() {
-    if (judulLirik.style.display === 'none') {
-        judulLirik.style.display = 'block'; // Tampilkan elemen judul lirik saat tombol ditekan
+    if (judulLirik1.style.display === 'none') {
+        judulLirik1.style.display = 'block'; // Tampilkan elemen judul lirik saat tombol ditekan
     } else {
-        judulLirik.style.display = 'none'; // Sembunyikan elemen judul lirik saat tombol ditekan kembali
+        judulLirik1.style.display = 'none'; // Sembunyikan elemen juudl lirik saat tombol ditekan kembali
     }
 });
 
 // buton show lirik
 showLirikButton1.addEventListener('click', function() {
-    if (lyricsContainer.style.display === 'none') {
-        lyricsContainer.style.display = 'block'; // Tampilkan elemen lirik saat tombol ditekan
+    if (lyricsContainer1.style.display === 'none') {
+        lyricsContainer1.style.display = 'block'; // Tampilkan elemen lirik saat tombol ditekan
     } else {
-        lyricsContainer.style.display = 'none'; // Sembunyikan elemen lirik saat tombol ditekan kembali
+        lyricsContainer1.style.display = 'none'; // Sembunyikan elemen lirik saat tombol ditekan kembali
     }
 });
 
 // lirik
-
-const lyrics = [
-    
+const lyrics1 = [
     { time: 243, text: "Lirik tidak tersedia" },
     // Tambahkan lirik sesuai dengan durasi waktunya
 ];
 
-let currentLyricIndex = 0;
-let timeoutId;
+let currentLyricIndex1 = 0;
+let timeoutId1;
 
-playButton.addEventListener('click', function() {
-    if (audioPlayer.paused) {
-        audioPlayer.play();
-        playButton.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
-        spotifyImage.src = 'image/profil music/spotify.gif';
-        updateProgressBar();
-        displayLyrics();
-    } else {
-        audioPlayer.pause();
-        playButton.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
-        spotifyImage.src = 'image/profil music/spotify.png';
-
-        clearTimeout(timeoutId); // Menghentikan timeout saat audio dijeda
-    }
-});
-
-function displayLyrics() {
-    const currentLyric = lyrics[currentLyricIndex];
-    if (currentLyric) {
-        const timeRemaining = (currentLyric.time - audioPlayer.currentTime) * 1000;
-        timeoutId = setTimeout(function() {
-            lyricsContainer.textContent = ''; // Menghapus teks lirik setelah jeda waktu tertentu
-            currentLyricIndex++;
-            displayLyrics(); // Lanjutkan ke lirik berikutnya
-        }, timeRemaining); // Hitung jeda waktu sebelum memunculkan teks berikutnya
-        lyricsContainer.textContent = currentLyric.text; // Tampilkan teks lirik saat ini
+function displayLyrics1() {
+    const currentLyric1 = lyrics1[currentLyricIndex1];
+    if (currentLyric1) {
+        const timeRemaining1 = (currentLyric1.time - audioPlayer1.currentTime) * 1000;
+        timeoutId1 = setTimeout(function() {
+            lyricsContainer1.textContent = ''; // Menghapus teks lirik setelah jeda waktu tertentu
+            currentLyricIndex1++;
+            displayLyrics1(); // Lanjutkan ke lirik berikutnya
+        }, timeRemaining1); // Hitung jeda waktu sebelum memunculkan teks berikutnya
+        lyricsContainer1.textContent = currentLyric1.text; // Tampilkan teks lirik saat ini
     }
 }
 
-// seek bar
-function updateProgressBar() {
-     const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-     progressBar.style.width = progress + '%';
-     progressIndicator.style.left = progress + '%'; // Atur posisi titik besar sesuai dengan progress
-     progressDurationLeft.textContent = formatTime(audioPlayer.currentTime);
-     progressDurationRight.textContent = formatTime(audioPlayer.duration - audioPlayer.currentTime);
-     
-     // Mengatur rotasi gambar piringan-hitam berdasarkan progres musik
-     const rotation = progress * 200.2; // Mengurangi faktor skala untuk mempercepat putaran
-     const piringanHitam = document.getElementById('piringan-hitam');
-     piringanHitam.style.transform = `rotate(${rotation}deg)`;
-     
-     // Menambahkan margin kiri 25px saat gambar berputar
-     piringanHitam.style.marginLeft = '-25px';
+playButton1.addEventListener('click', function() {
+    if (audioPlayer1.paused) {
+        audioPlayer1.play();
+        playButton1.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
+        spotifyImage1.src = 'image/profil music/spotify.gif';
+        updateProgressBar1();
+        // Set margin left piringan-hitam1 menjadi 25px ketika audio dimainkan
+        piringanHitam1.style.marginLeft = '25px';
+        displayLyrics1(); // Memulai menampilkan lirik
+        // memunculkan icon lirik
+        showLirikButton1.style.display ='block';
 
-     
-     if (!audioPlayer.paused) {
-         requestAnimationFrame(updateProgressBar);
-          piringanHitam.style.marginLeft = '25px';
+        // jika clik maka Fungsi musik 3 pause semua
+        judulLirik3.style.display = 'none'; // jusul lirik 2
+        lyricsContainer3.style.display = 'none'; // lirik 2
+        piringanHitam3.style.marginLeft = '-25px'; // piringan hitaam 2
+        audioPlayer3.pause(); // musik 2
+        spotifyImage3.src = 'image/profil music/spotify.png'; // logo spotify 2
+        playButton3.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play 
 
-     }
- }
- 
+        // jika clik maka Fungsi musik 2 pause semua
+        judulLirik2.style.display = 'none'; // jusul lirik 2
+        lyricsContainer2.style.display = 'none'; // lirik 2
+        piringanHitam2.style.marginLeft = '-25px'; // piringan hitaam 2
+        audioPlayer2.pause(); // musik 2
+        spotifyImage2.src = 'image/profil music/spotify.png'; // logo spotify 2
+        playButton2.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play btn 2
+    } else {
+        audioPlayer1.pause();
+        playButton1.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
+        spotifyImage1.src = 'image/profil music/spotify.png';
+        piringanHitam1.style.marginLeft = '-25px';
+        clearTimeout(timeoutId1); // Menghentikan timeout saat audio dijeda
+    }
+});
+
+
+function updateProgressBar1() {
+    const progress = (audioPlayer1.currentTime / audioPlayer1.duration) * 100;
+    progressBar1.style.width = progress + '%';
+    progressIndicator1.style.left = progress + '%'; // Atur posisi titik besar sesuai dengan progress
+    progressDurationLeft1.textContent = formatTime(audioPlayer1.currentTime);
+    progressDurationRight1.textContent = formatTime(audioPlayer1.duration - audioPlayer1.currentTime);
+
+         // Mengatur rotasi gambar piringan-hitam berdasarkan progres musik
+         const rotation = progress * 200.2; // Mengurangi faktor skala untuk mempercepat putaran
+         const piringanHitam1 = document.getElementById('piringan-hitam1');
+         piringanHitam1.style.transform = `rotate(${rotation}deg)`;
+    
+    if (!audioPlayer1.paused) {
+        requestAnimationFrame(updateProgressBar1);
+    }
+}
+
 
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
@@ -129,24 +141,24 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }
 
-audioPlayer.addEventListener('ended', function() {
-    playButton.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
-    progressBar.style.width = '0%'; // Mengatur progress bar kembali ke awal saat musik selesai
-    progressIndicator.style.left = '0%'; // Mengatur posisi titik besar kembali ke awal saat musik selesai
-    progressDurationLeft.textContent = '0:00';
-    progressDurationRight.textContent = '0:00';
-    
+
+
+audioPlayer1.addEventListener('ended', function() {
+    playButton1.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
+    progressBar1.style.width = '0%'; // Mengatur progress bar kembali ke awal saat musik selesai
+    progressIndicator1.style.left = '0%'; // Mengatur posisi titik besar kembali ke awal saat musik selesai
+    progressDurationLeft1.textContent = '0:00';
+    progressDurationRight1.textContent = '0:00';
+
     // Simulasikan klik pada tombol dengan ID playButton2 (lanjut ke musik berikutnya)
     const playButton2 = document.getElementById('playButton2');
-    piringanHitam2.style.marginLeft = '-25px';
-    spotifyImage.src = 'image/profil music/spotify.png';
+    piringanHitam1.style.marginLeft = '-25px';
+    spotifyImage1.src = 'image/profil music/spotify.png';
     playButton2.click();
 });
 
 
-
-
-// musik 2---------------------------------------------
+// musik 222222222222222222222222222222222222222222222222
 const playButton2 = document.getElementById('playButton2');
 const audioPlayer2 = document.getElementById('audioPlayer2');
 const progressBar2 = document.querySelector('.progress-bar2');
@@ -254,6 +266,22 @@ playButton2.addEventListener('click', function() {
         // Set margin left piringan-hitam2 menjadi 25px ketika audio dimainkan
         piringanHitam2.style.marginLeft = '25px';
         displayLyrics2(); // Memulai menampilkan lirik
+
+        // jika clik maka Fungsi musik 1 pause semua
+        judulLirik1.style.display = 'none'; // jusul lirik 1
+        lyricsContainer1.style.display = 'none'; // lirik 1
+        piringanHitam1.style.marginLeft = '-25px'; // piringan hitaam 1
+        audioPlayer1.pause(); // musik 1
+        spotifyImage1.src = 'image/profil music/spotify.png'; // logo spotify 1
+        playButton1.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play 
+
+        // jika clik maka Fungsi musik 3 pause semua
+        judulLirik3.style.display = 'none'; // jusul lirik 2
+        lyricsContainer3.style.display = 'none'; // lirik 2
+        piringanHitam3.style.marginLeft = '-25px'; // piringan hitaam 2
+        audioPlayer3.pause(); // musik 2
+        spotifyImage3.src = 'image/profil music/spotify.png'; // logo spotify 2
+        playButton3.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play btn 2
     } else {
         audioPlayer2.pause();
         playButton2.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
@@ -377,6 +405,22 @@ playButton3.addEventListener('click', function() {
         piringanHitam3.style.marginLeft = '25px';
         updateProgressBar3();
         displayLyrics3();
+
+        // jika clik maka Fungsi musik 1 pause semua
+        judulLirik1.style.display = 'none'; // jusul lirik 1
+        lyricsContainer1.style.display = 'none'; // lirik 1
+        piringanHitam1.style.marginLeft = '-25px'; // piringan hitaam 1
+        audioPlayer1.pause(); // musik 1
+        spotifyImage1.src = 'image/profil music/spotify.png'; // logo spotify 1
+        playButton1.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play 
+         
+         // jika clik maka Fungsi musik 2 pause semua
+        judulLirik2.style.display = 'none'; // jusul lirik 2
+        lyricsContainer2.style.display = 'none'; // lirik 2
+        piringanHitam2.style.marginLeft = '-25px'; // piringan hitaam 2
+        audioPlayer2.pause(); // musik 2
+        spotifyImage2.src = 'image/profil music/spotify.png'; // logo spotify 2
+        playButton2.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play btn 2
     } else {
         audioPlayer3.pause();
         playButton3.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play

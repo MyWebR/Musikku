@@ -111,31 +111,11 @@ body {
   justify-content: center;
 }
 
-#judulLirik,
-#judulLirik2,
-#judulLirik3 {
-  color: #f8fafc7f;
-  margin-bottom: -15px;
-}
-
 /* tombol play and pause and lirik*/
 #showLirik img {
   padding: 5px;
   height: 30px;
   width: auto;
-}
-
-#playButton img {
-  padding: 5px;
-  height: 35px;
-  width: auto;
-}
-
-#spotify,
-#spotify2,
-#spotify3 {
-  margin-left: 10px;
-  height: 40px;
 }
 
 /* seek bar */
@@ -206,6 +186,81 @@ button:hover {
   width: auto;
 }
 
+/* musik 11111111111111111111111111111111111111111111111111111 */
+.progress-duration-left1,
+.progress-duration-right1 {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-left1 {
+  left: 0;
+}
+
+.progress-duration-right1 {
+  right: 0;
+}
+
+.progress-bar1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicator1 {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+#spotify1 {
+  margin-left: 10px;
+  height: 40px;
+}
+
+#profil2 {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitam1 {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
+
+/* tombol play and pause and lirik*/
+#showLirik1 img {
+  padding: 5px;
+  height: 30px;
+  width: auto;
+}
+
+#judulLirik1 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
+}
+
+#playButton1 img {
+  padding: 5px;
+  height: 35px;
+  width: auto;
+}
+
 /* musik 22222222222222222222222222222222222222222222222222222 */
 .progress-duration-left2,
 .progress-duration-right2 {
@@ -258,11 +313,21 @@ button:hover {
   transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
 }
 
+#spotify2 {
+  margin-left: 10px;
+  height: 40px;
+}
+
 /* tombol play and pause and lirik*/
 #showLirik2 img {
   padding: 5px;
   height: 30px;
   width: auto;
+}
+
+#judulLirik2 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
 }
 
 #playButton2 img {
@@ -323,11 +388,21 @@ button:hover {
   transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
 }
 
+#spotify3 {
+  margin-left: 10px;
+  height: 40px;
+}
+
 /* tombol play and pause and lirik*/
 #showLirik3 img {
   padding: 5px;
   height: 30px;
   width: auto;
+}
+
+#judulLirik3 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
 }
 
 #playButton3 img {
