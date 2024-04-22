@@ -9,6 +9,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: #f8fafc;
+  background-color: #000000f0;
 }
 
 /* cari musik */
@@ -19,22 +20,26 @@ body {
 }
 
 .search-input {
+  height: 30px;
   flex-grow: 1; /* Input akan mengisi sisa ruang yang tersedia */
   padding: 8px;
-  border: 2px solid black;
+  border: 2px solid rgb(52, 52, 52);
+  background-color: rgb(52, 52, 52);
   border-radius: 5px;
 }
 
 .search-button {
-  background-color: transparent;
+  height: 50px;
+  background-color: rgb(52, 52, 52);
   border: none;
-  padding: 10px 10px 10px 10px;
+  padding: 8px 20px 8px 20px;
   cursor: pointer;
   margin-left: 10px;
 }
 
 .search-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  background-color: rgb(52, 52, 52);
 }
 
 .search-button img {
@@ -53,8 +58,8 @@ body {
   padding: 20px;
   border-radius: 35px;
   margin-bottom: 15px;
-  background-color: rgba(0, 0, 0, 0.614);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  background-color: rgb(52, 52, 52);
+  box-shadow: rgba(0, 0, 0, 0.655) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
@@ -84,8 +89,14 @@ body {
   margin-bottom: 20px;
 }
 
+.nama-musik a {
+  text-decoration: none;
+  color: #f8fafc;
+}
+
 .pencipta-musik p {
   margin-top: -15px;
+  color: #f8fafc7f;
 }
 
 .nama-musik img {
@@ -98,6 +109,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#judulLirik,
+#judulLirik2,
+#judulLirik3 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
+}
+
+/* tombol play and pause and lirik*/
+#showLirik img {
+  padding: 5px;
+  height: 30px;
+  width: auto;
+}
+
+#playButton img {
+  padding: 5px;
+  height: 35px;
+  width: auto;
 }
 
 #spotify,
@@ -228,13 +259,13 @@ button:hover {
 }
 
 /* tombol play and pause and lirik*/
-#showLirik2 img{
+#showLirik2 img {
   padding: 5px;
   height: 30px;
   width: auto;
 }
 
-#playButton2 img{
+#playButton2 img {
   padding: 5px;
   height: 35px;
   width: auto;

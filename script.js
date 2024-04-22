@@ -37,12 +37,32 @@ const progressIndicator = document.querySelector('.progress-indicator');
 const progressDurationLeft = document.querySelector('.progress-duration-left');
 const progressDurationRight = document.querySelector('.progress-duration-right');
 const spotifyImage = document.getElementById('spotify');
+const showLirikButton1 = document.getElementById('showLirik');
+const lyricsContainer = document.getElementById('lyricsContainer');
 
+// buton show judul lirik
+showLirikButton1.addEventListener('click', function() {
+    if (judulLirik.style.display === 'none') {
+        judulLirik.style.display = 'block'; // Tampilkan elemen judul lirik saat tombol ditekan
+    } else {
+        judulLirik.style.display = 'none'; // Sembunyikan elemen judul lirik saat tombol ditekan kembali
+    }
+});
+
+// buton show lirik
+showLirikButton1.addEventListener('click', function() {
+    if (lyricsContainer.style.display === 'none') {
+        lyricsContainer.style.display = 'block'; // Tampilkan elemen lirik saat tombol ditekan
+    } else {
+        lyricsContainer.style.display = 'none'; // Sembunyikan elemen lirik saat tombol ditekan kembali
+    }
+});
+
+// lirik
 
 const lyrics = [
-    { time: 4, text: "Lirik" },
-    { time: 6, text: "Tidak" },
-    { time: 8, text: "Tersedia" },
+    
+    { time: 243, text: "Lirik tidak tersedia" },
     // Tambahkan lirik sesuai dengan durasi waktunya
 ];
 
@@ -119,6 +139,7 @@ audioPlayer.addEventListener('ended', function() {
     // Simulasikan klik pada tombol dengan ID playButton2 (lanjut ke musik berikutnya)
     const playButton2 = document.getElementById('playButton2');
     piringanHitam2.style.marginLeft = '-25px';
+    spotifyImage.src = 'image/profil music/spotify.png';
     playButton2.click();
 });
 
@@ -136,6 +157,15 @@ const piringanHitam2 = document.getElementById('piringan-hitam2');
 const spotifyImage2 = document.getElementById('spotify2');
 const showLirikButton2 = document.getElementById('showLirik2');
 const lyricsContainer2 = document.getElementById('lyricsContainer2');
+
+// buton show judul lirik
+showLirikButton2.addEventListener('click', function() {
+    if (judulLirik2.style.display === 'none') {
+        judulLirik2.style.display = 'block'; // Tampilkan elemen judul lirik saat tombol ditekan
+    } else {
+        judulLirik2.style.display = 'none'; // Sembunyikan elemen juudl lirik saat tombol ditekan kembali
+    }
+});
 
 // buton show lirik
 showLirikButton2.addEventListener('click', function() {
@@ -270,6 +300,7 @@ audioPlayer2.addEventListener('ended', function() {
     // Simulasikan klik pada tombol dengan ID playButton3 (lanjut ke musik berikutnya)
     const playButton3 = document.getElementById('playButton3');
     piringanHitam2.style.marginLeft = '-25px';
+    spotifyImage2.src = 'image/profil music/spotify.png';
     playButton3.click();
 });
 
@@ -285,6 +316,15 @@ const piringanHitam3 = document.getElementById('piringan-hitam3');
 const lyricsContainer3 = document.getElementById('lyricsContainer3');
 const showLirikButton = document.getElementById('showLirik3');
 const spotifyImage3 = document.getElementById('spotify3');
+
+// buton show judul lirik
+showLirikButton.addEventListener('click', function() {
+    if (judulLirik3.style.display === 'none') {
+        judulLirik3.style.display = 'block'; // Tampilkan elemen judul lirik saat tombol ditekan
+    } else {
+        judulLirik3.style.display = 'none'; // Sembunyikan elemen judul lirik saat tombol ditekan kembali
+    }
+});
 
 // buton show lirik
 showLirikButton.addEventListener('click', function() {
