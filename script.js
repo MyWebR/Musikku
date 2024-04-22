@@ -36,18 +36,45 @@ const progressBar = document.querySelector('.progress-bar');
 const progressIndicator = document.querySelector('.progress-indicator');
 const progressDurationLeft = document.querySelector('.progress-duration-left');
 const progressDurationRight = document.querySelector('.progress-duration-right');
+const lyricsContainer = document.getElementById('lyricsContainer');
+
+const lyrics = [
+    { time: 4, text: "Lirik" },
+    { time: 6, text: "Tidak" },
+    { time: 8, text: "Tersedia" },
+    // Tambahkan lirik sesuai dengan durasi waktunya
+];
+
+let currentLyricIndex = 0;
+let timeoutId;
 
 playButton.addEventListener('click', function() {
     if (audioPlayer.paused) {
         audioPlayer.play();
         playButton.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
         updateProgressBar();
+        displayLyrics();
     } else {
         audioPlayer.pause();
         playButton.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
+        clearTimeout(timeoutId); // Menghentikan timeout saat audio dijeda
     }
 });
 
+function displayLyrics() {
+    const currentLyric = lyrics[currentLyricIndex];
+    if (currentLyric) {
+        const timeRemaining = (currentLyric.time - audioPlayer.currentTime) * 1000;
+        timeoutId = setTimeout(function() {
+            lyricsContainer.textContent = ''; // Menghapus teks lirik setelah jeda waktu tertentu
+            currentLyricIndex++;
+            displayLyrics(); // Lanjutkan ke lirik berikutnya
+        }, timeRemaining); // Hitung jeda waktu sebelum memunculkan teks berikutnya
+        lyricsContainer.textContent = currentLyric.text; // Tampilkan teks lirik saat ini
+    }
+}
+
+// seek bar
 function updateProgressBar() {
      const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
      progressBar.style.width = progress + '%';
@@ -89,6 +116,8 @@ audioPlayer.addEventListener('ended', function() {
     const playButton2 = document.getElementById('playButton2');
     playButton2.click();
 });
+
+
 
 
 // musik 2---------------------------------------------
@@ -162,21 +191,68 @@ const progressIndicator3 = document.querySelector('.progress-indicator3');
 const progressDurationLeft3 = document.querySelector('.progress-duration-left3');
 const progressDurationRight3 = document.querySelector('.progress-duration-right3');
 const piringanHitam3 = document.getElementById('piringan-hitam3');
+const lyricsContainer3 = document.getElementById('lyricsContainer3');
+
+const lyrics3 = [
+    { time: 4, text: "~Music~" },
+
+    { time: 11, text: "Just one more tear to cry, one teaedrop my eye" },
+    { time: 16, text: "You better save it for" },
+    { time: 23, text: "The middle of the night when things aren't black and white" },
+    { time: 28, text: "Enter, Troubadour" },
+    { time: 31, text: "'Remember 24?'" },
+    { time: 37, text: "~Music~" },
+    { time: 43, text: "And when I'm back in Chicago, Ifeel it" },
+    { time: 50, text: "Another version of me, Iwas in it" },
+    { time: 56, text: "Iwave goodbye to the end of beginning" },
+    { time: 61, text: "~Music~" },
+    { time: 69, text: "This song has started now, and you're just fidding out" },
+    { time: 73, text: "Now isn't that a laugh?" },
+    { time: 82, text: "Amajor sacrifice, but clueless at the time" },
+    { time: 85, text: "Enter, Caroline" },
+    { time: 90, text: "'Just trust me, you'll be fine'" },
+    { time: 102, text: "And when I'm back in Chicago, I feel it" },
+    { time: 106, text: "I wave goodbye to the end off beginning" },
+    { time: 112, text: "(Goodbye, goodbye, goodbye, goodbye)" },
+    { time: 118, text: "You take the man out of the city, not the cyty out the man" },
+    { time: 130, text: "You take the man out of the city, not the cyty out the man" },
+    { time: 135, text: "You take the man out of the-" },
+    { time: 140, text: "And when I'm back in Chicago, I feel it" },
+    { time: 151, text: "Another version of me, Iwas in it" },
+    { time: 159, text: "(Goodbye, goodbye)" },
+    // Tambahkan lirik sesuai dengan durasi waktunya
+];
+
+let currentLyricIndex3 = 0;
+let timeoutId3;
 
 playButton3.addEventListener('click', function() {
     if (audioPlayer3.paused) {
         audioPlayer3.play();
         playButton3.innerHTML = '<img src="image/iocn/pause.png" alt="">'; // Ganti ikon tombol menjadi ikon pause
-        updateProgressBar3();
-        // Set margin left piringan-hitam2 menjadi 25px ketika audio dimainkan
         piringanHitam3.style.marginLeft = '25px';
+        updateProgressBar3();
+        displayLyrics3();
     } else {
         audioPlayer3.pause();
         playButton3.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
-        // Set margin left piringan-hitam2 menjadi -25px ketika audio di-pause
         piringanHitam3.style.marginLeft = '-25px';
+        clearTimeout(timeoutId3); // Menghentikan timeout saat audio dijeda
     }
 });
+
+function displayLyrics3() {
+    const currentLyric3 = lyrics3[currentLyricIndex3];
+    if (currentLyric3) {
+        const timeRemaining3 = (currentLyric3.time - audioPlayer3.currentTime) * 1000;
+        timeoutId3 = setTimeout(function() {
+            lyricsContainer3.textContent = ''; // Menghapus teks lirik setelah jeda waktu tertentu
+            currentLyricIndex3++;
+            displayLyrics3(); // Lanjutkan ke lirik berikutnya
+        }, timeRemaining3); // Hitung jeda waktu sebelum memunculkan teks berikutnya
+        lyricsContainer3.textContent = currentLyric3.text; // Tampilkan teks lirik saat ini
+    }
+}
 
 function updateProgressBar3() {
     const progress = (audioPlayer3.currentTime / audioPlayer3.duration) * 100;
