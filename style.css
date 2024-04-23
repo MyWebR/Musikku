@@ -38,7 +38,12 @@ body {
 input {
   color: white;
   font-family: "Rubik", sans-serif;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+input:focus {
+  color: #22c55e;
+  border: 2px solid #22c55e;
 }
 
 .search-input {
@@ -61,7 +66,8 @@ input {
 
 .search-button:hover {
   box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
-  background-color: rgb(52, 52, 52);
+  background-color: #22c55e;
+  color: black;
 }
 
 .search-button img {
