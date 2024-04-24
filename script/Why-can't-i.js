@@ -31,7 +31,31 @@ showLirikButton5.addEventListener('click', function() {
 
 // lirik
 const lyrics5 = [
-    { time: 243, text: "Lirik tidak tersedia" },
+    { time: 25, text: "~Musik~" },
+    { time: 33, text: "I need somebody to love" },
+    { time: 38, text: "I need somebody to hold" },
+    { time: 47, text: "Me tight, cause I'm afraid" },
+    { time: 53, text: "That you don't feel the same" },
+    { time: 60, text: "Why can't I be in your mind" },
+    { time: 65, text: "Why can't I be in your life" },
+    { time: 75, text: "I find it difficult for me" },
+    { time: 82, text: "You don't feek the same" },
+    { time: 89, text: "But you" },
+    { time: 92, text: "Make me" },
+    { time: 102, text: "Go crazy" },
+    { time: 110, text: "But you" },
+    { time: 116, text: "Oh love" },
+    { time: 120, text: "I've let my love die" },
+    { time: 129, text: "Cause I'm a foll who thinks you're" },
+    { time: 137, text: "You've got me losing my mind" },
+    { time: 144, text: "But you" },
+    { time: 147, text: "Make me" },
+    { time: 157, text: "Go crazy" },
+    { time: 165, text: "Over you" },
+    { time: 171, text: "But you" },
+    { time: 174, text: "Make me" },
+    { time: 184, text: "Go crazy" },
+    { time: 200, text: "But you" },
     // Tambahkan lirik sesuai dengan durasi waktunya
 ];
 
