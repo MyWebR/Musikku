@@ -1,0 +1,75 @@
+
+/* 7777777777777777777777777777777777777777777777777777777777777777777777777777777 */
+.progress-duration-left7,
+.progress-duration-right7 {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-left7 {
+  left: 0;
+}
+
+.progress-duration-right7 {
+  right: 0;
+}
+
+.progress-bar7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicator7 {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+#spotify7 {
+  margin-left: 10px;
+  height: 40px;
+}
+
+#profil7 {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitam7 {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
+
+/* tombol play and pause and lirik*/
+#showLirik7 img {
+  padding: 5px;
+  height: 30px;
+  width: auto;
+}
+
+#judulLirik7 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
+}
+
+#playButton7 img {
+  padding: 5px;
+  height: 35px;
+  width: auto;
+}

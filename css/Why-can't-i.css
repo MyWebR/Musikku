@@ -1,0 +1,92 @@
+
+/* musik 55555555555555555555555555555555555555555555555555555555555 */
+.playlist2 {
+     margin: 15px;
+   }
+   
+   .musik2 {
+     height: 100%;
+     width: auto;
+     padding: 20px;
+     border-radius: 35px;
+     margin-bottom: 15px;
+     background-color: rgb(52, 52, 52);
+     box-shadow: rgba(0, 0, 0, 0.655) 0px 2px 4px,
+       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+   }
+   
+   .progress-duration-left5,
+   .progress-duration-right5 {
+       position: absolute;
+       top: 0;
+       font-size: 12px;
+       line-height: 50px;
+       padding: 0 10px;
+       z-index: 1;
+       color: #f8fafc;
+   }
+   
+   .progress-duration-left5 {
+       left: 0;
+   }
+   
+   .progress-duration-right5 {
+       right: 0;
+   }
+   
+   .progress-bar5 {
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       background-color: #4caf50;
+       width: 0%;
+       border-radius: 10px;
+   }
+   
+   .progress-indicator5 {
+       margin-top: -3px;
+       margin-left: -1px;
+       position: absolute;
+       top: 0;
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+       background-color: #000000;
+       z-index: 2;
+   }
+   
+   #spotify5 {
+       margin-left: 10px;
+       height: 40px;
+   }
+   
+   #profil5 {
+       z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+   }
+   
+   #piringan-hitam5 {
+       margin-left: -25px;
+       z-index: 0;
+       transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+   }
+   
+   /* tombol play and pause and lirik*/
+   #showLirik5 img {
+       padding: 5px;
+       height: 30px;
+       width: auto;
+   }
+   
+   #judulLirik5 {
+       color: #f8fafc7f;
+       margin-bottom: -15px;
+   }
+   
+   #playButton5 img {
+       padding: 5px;
+       height: 35px;
+       width: auto;
+   }
+   
+   
