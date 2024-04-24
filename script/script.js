@@ -5,7 +5,7 @@ const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', function() {
     const searchText = searchInput.value.trim().toLowerCase(); // Ambil teks dari input, hapus spasi di awal dan akhir, dan konversikan ke huruf kecil
     if (searchText === '') {
-        alert('Mohon ketikkan lagu yang ingin Anda cari.'); // Tampilkan pesan jika input kosong
+        alert('Masukan lagu yang ingin Anda cari.'); // Tampilkan pesan jika input kosong
         return; // Berhenti dari fungsi karena input kosong
     }
 
