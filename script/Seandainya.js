@@ -31,7 +31,35 @@ showLirikButton6.addEventListener('click', function() {
 
 // lirik
 const lyrics6 = [
-    { time: 243, text: "Lirik tidak tersedia" },
+    { time: 38, text: "~Musik~" },
+    { time: 46, text: "Kelak kau 'kan menjalani hidupmu sendiri" },
+    { time: 53, text: "Melukai kenangan yang telah kita lalui" },
+    { time: 61, text: "Yang tersisa hanya aku sendiri di sini" },
+    { time: 69, text: "Kau akan terbang jauh menembus awan" },
+    { time: 77, text: "Memulai kisah baru tanpa diriku" },
+    { time: 87, text: "Seandainya kau tau ku tak ingin kau pergi" },
+    { time: 93, text: "Meninggalkanku sendiri bersama bayanganku" },
+    { time: 102, text: "Seandainya kau tau aku 'kan selalu cinta" },
+    { time: 110, text: "Jangan kau lupakan kenangan kita selama ini" },
+    { time: 122, text: "~Musik~" },
+    { time: 130, text: "Kelak kau 'kan menjalani hidupmu sendiri" },
+    { time: 138, text: "Meluakai kenangan yang telah kita lalui" },
+    { time: 145, text: "Kau akan terbang jauh menembus awan" },
+    { time: 154, text: "Memulai kisah baru tanpa diriku" },
+    { time: 164, text: "Seandainya kau tau ku tak ingin kau pergi" },
+    { time: 169, text: "Meninggalkanku sendiri bersama bayanganku" },
+    { time: 179, text: "Seandainya kau tau aku 'kan selalu cinta" },
+    { time: 185, text: "Jangan kau lupakan kenangan kita selama ini" },
+    { time: 185, text: "~Musik~" },
+    { time: 190, text: "Selama ini" },
+    { time: 201, text: "~Musik~" },
+    { time: 209, text: "Seandainya kau tau ku tak ingin kau pergi" },
+    { time: 210, text: "oh-oo" },
+    { time: 216, text: "Meninggalkanku sendiri bersama bayanganku" },
+    { time: 226, text: "Seandainya kau tau aku 'kan selalu cinta" },
+    { time: 233, text: "Jangan kau lupakan kenangan kita selama ini" },
+    { time: 237, text: "Ha-aa-oo" },
+    { time: 243, text: "Selama ini" },
     // Tambahkan lirik sesuai dengan durasi waktunya
 ];
 
