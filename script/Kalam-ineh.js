@@ -31,7 +31,24 @@ showLirikButton7.addEventListener('click', function() {
 
 // lirik
 const lyrics7 = [
-    { time: 243, text: "Lirik tidak tersedia" },
+    { time: 14, text: "~Musik~" },
+    { time: 18, text: " كلام عينية في الغرام احلي من الاغاني  - Kalam 'ienih fil gharam ahlaa mil aghey" },
+    { time: 22, text: "من كلمتين من سلام ببقي حدتاني  - Min kilmitiin min salaam bab-a hdi taanee" },
+    { time: 25, text: " لما يميل قلبي انا وياه يميل  - Lammaa yameel albanaa waya yameel" },
+    { time: 29, text: " تفديه عيوني و عمري كله مش قليل  - Tifde 'uyuune wa 'omuree kulluh mush aleel" },
+    { time: 33, text: "كلام عينية في الغرام احلي من الاغاني - Kalam 'ienih fil gharam ahlaa mil aghey" },
+    { time: 36, text: "من كلمتين من سلام ببقي حدتاني - Min kilmitiin min salaam bab-a hdi taanee" },
+    { time: 40, text: "لما يميل قلبي انا وياه يميل - Lammaa yameel albanaa waya yameel" },
+    { time: 44, text: "تفديه عيوني و عمري كله مش قليل - Tifde 'uyuune wa 'omuree kulluh mush aleel" },
+    { time: 47, text: "ليلي, يا ليل ياليلي - Leele yaa leil yaa leelee"},
+    { time: 51, text: "يا ليل ياليلي من غرامه ليلي طال - Yaa leil yaa leelee min gharaamih leelee thaal" },
+    { time: 54, text: "حبيب سنيني بينه و بيني - Habeeb siniin Beynuh we beinee"},
+    { time: 58, text: "يا قبلي خطوة واحدة يعني مش خيال - Ya abli khutwah wahdah ya'ne mush khayaal"},
+    { time: 61, text: "ليلي, يا ليل ياليلي - Leele yaa leil yaa leelee"},
+    { time: 65, text: "يا ليل ياليلي من غرامه ليلي طال - Yaa leil yaa leelee min gharaamih leelee thaal"},
+    { time: 69, text: "حبيب سنيني بينه و بيني - Habeeb siniin Beynuh we beinee"},
+    { time: 75, text: "يا قبلي خطوة واحدة يعني مش خيال - Ya abli khutwah wahdah ya'ne mush khyaal"},
+    { time: 87, text: "~Musik~" },
     // Tambahkan lirik sesuai dengan durasi waktunya
 ];
 
