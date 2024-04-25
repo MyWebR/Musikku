@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
           showIndri();
         } else if (id === 'arya') {
           showArya();
+        } else if (id === 'jkt48') {
+            showJkt48();
+        } else if (id === 'masdo') {
+            showMasdo();
+        } else if (id === 'deni-caknan') {
+            showDeniCaknan();
         }
       });
     });
@@ -57,7 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('byIndri').style.display = 'block';
     document.getElementById('byArya').style.display = 'block';
     document.getElementById('byRestu-2').style.display = 'block';
+    document.getElementById('byJkt48').style.display = 'block';
+    document.getElementById('byMasdo').style.display = 'block';
+    document.getElementById('byDeni-caknan').style.display = 'block';
   }
+
   
   function showIndri() {
     hideAll();
@@ -68,6 +78,21 @@ document.addEventListener('DOMContentLoaded', function() {
     hideAll();
     document.getElementById('byArya').style.display = 'block';
   }
+
+  function showJkt48() {
+    hideAll();
+    document.getElementById('byJkt48').style.display = 'block';
+  }
+
+  function showMasdo() {
+    hideAll();
+    document.getElementById('byMasdo').style.display = 'block';
+  }
+
+  function showDeniCaknan() {
+    hideAll();
+    document.getElementById('byDeni-caknan').style.display = 'block';
+  }
   
   function hideAll() {
     var playlists = document.querySelectorAll('.playlist');
@@ -75,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
       playlist.style.display = 'none';
     });
   }
+
+  
   
 
 // musik 11111111111111111111111111111111111111111111111

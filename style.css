@@ -1,7 +1,7 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-
 /* end font */
+
 body {
   margin: 0;
   padding: 0;
@@ -79,10 +79,32 @@ input:focus {
   margin: 15px;
 }
 
-/* reques */
-.kategori {
+/* judul kategori */
+.judul-kategori {
   margin: 15px;
 }
+
+.judul-kategori p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* reques kategori */
+.kategori {
+  display: flex;
+  overflow-x: auto;
+  margin: 15px;
+}
+
+.kategori button {
+  flex: 0 0 auto; /* Flex items tidak fleksibel, tetap tetap pada lebar aslinya */
+  white-space: nowrap; /* Mencegah teks pindah baris */
+  padding: 8px 12px; /* Atur padding sesuai kebutuhan */
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+
 
 #semua {
   padding: 10px;
@@ -120,6 +142,48 @@ input:focus {
 
 
 #arya:hover {
+  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
+#jkt48 {
+  padding: 10px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  font-weight: bold;
+}
+
+
+#jkt48:hover {
+  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
+#masdo {
+  padding: 10px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  font-weight: bold;
+}
+
+
+#masdo:hover {
+  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
+#deni-caknan {
+  padding: 10px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  font-weight: bold;
+}
+
+
+#deni-caknan:hover {
   box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
   background-color: #22c55e;
   color: black;
