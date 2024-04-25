@@ -1,0 +1,89 @@
+/* musik 55555555555555555555555555555555555555555555555555555555555 */
+.playlistJkt1 {
+  margin: 15px;
+}
+
+.musikJkt1 {
+  height: 100%;
+  width: auto;
+  padding: 20px;
+  border-radius: 35px;
+  margin-bottom: 15px;
+  background-color: rgb(52, 52, 52);
+  box-shadow: rgba(0, 0, 0, 0.655) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.progress-duration-leftJkt1,
+.progress-duration-rightJkt1 {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.progress-duration-leftJkt1 {
+  left: 0;
+}
+
+.progress-duration-rightJkt1 {
+  right: 0;
+}
+
+.progress-barJkt1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.progress-indicatorJkt1 {
+  margin-top: -3px;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+#spotifyJkt1 {
+  margin-left: 10px;
+  height: 40px;
+}
+
+#profilJkt1 {
+  z-index: 1; /* Atur kedalaman tampilan lebih tinggi dari gambar piringan hitam */
+}
+
+#piringan-hitamJkt1 {
+  margin-left: -25px;
+  z-index: 0;
+  transition: transform 0.5s ease, margin-left 0.5s ease; /* Menambahkan transisi mulus untuk transformasi rotasi dan margin kiri */
+}
+
+/* tombol play and pause and lirik*/
+#showLirikJkt1 img {
+  padding: 5px;
+  height: 30px;
+  width: auto;
+}
+
+#judulLirikJkt1 {
+  color: #f8fafc7f;
+  margin-bottom: -15px;
+}
+
+#playButtonJkt1 img {
+  padding: 5px;
+  height: 35px;
+  width: auto;
+}

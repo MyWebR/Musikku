@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="css/Seandainya.css" />
     <!-- KALAM INEH -->
     <link rel="stylesheet" href="css/Kalam-ineh.css" />
+
+    <!-- playlist jkt48 -->
+    <!-- sevenetn -->
+    <link rel="stylesheet" href="css/JKT/Senventen.css" />
     <!-- end css -->
     <title>Musikku</title>
   </head>
@@ -531,9 +535,75 @@
 
     <!-- playlist jkt48 -->
     <div class="playlist" id="byJkt48">
-      <!-- MUSIK-7 -->
+      <!-- MUSIK-jk1 -->
       <div class="musik">
-        <h2>PLAYLIST JKT-48 BELUM TERSEDIA</h2>
+        <!-- profil musik -->
+        <div class="profil-musik">
+          <img src="image/profil music/Seventen.jpg" alt="" id="profilJkt1" />
+          <img
+            src="image/profil music/piringan-hitam.webp"
+            alt=""
+            id="piringan-hitamJkt1"
+          />
+        </div>
+        <!-- nama musik -->
+        <div class="nama-musik">
+          <div class="pencipta-musik">
+            <a
+              href="https://open.spotify.com/track/7q4zdBAgLFETdnslE7Z0Eq?si=88b175d4273c4030"
+            >
+              <h2 id="seventeen">Seventeen</h2>
+            </a>
+            <div class="verifed">
+              <a
+                href="https://open.spotify.com/artist/2l8I5pWUnfF7bMK1z6EJRk?si=I2-M3drESkWGu0NLtVJ8cw"
+              >
+                <p>JKT48</p>
+              </a>
+              <a
+                href="https://open.spotify.com/artist/2l8I5pWUnfF7bMK1z6EJRk?si=I2-M3drESkWGu0NLtVJ8cw"
+                id="verifed"
+              >
+                <img src="image/iocn/verified.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <!-- button play music,lirik -->
+          <div class="play-musik">
+            <button id="showLirikJkt1">
+              <img src="image/iocn/microphone.png" alt="" />
+            </button>
+            <button id="playButtonJkt1">
+              <img src="image/iocn/play.png" alt="" />
+            </button>
+            <a
+              href="https://open.spotify.com/track/7q4zdBAgLFETdnslE7Z0Eq?si=88b175d4273c4030"
+            >
+              <img
+                src="image/profil music/spotify.png"
+                alt=""
+                id="spotifyJkt1"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- proses bar -->
+        <div class="progress-container">
+          <div class="progress-duration-leftJkt1">0:00</div>
+          <div class="progress-bar-container">
+            <div class="progress-barJkt1"></div>
+            <div class="progress-indicatorJkt1"></div>
+          </div>
+          <div class="progress-duration-rightJkt1">0:00</div>
+        </div>
+        <!-- judul lirik -->
+        <div id="judulLirikJkt1" style="display: none">
+          <p>~Lirik Musik~</p>
+        </div>
+        <!-- lirik -->
+        <div style="display: none" id="lyricsContainerJkt1"></div>
+
+        <audio id="audioPlayerJkt1" src="music/JKT/Seventeen.mp3"></audio>
       </div>
     </div>
 
@@ -545,7 +615,7 @@
       </div>
     </div>
 
-    <!-- playlist jkt48 -->
+    <!-- playlist deni-caknan -->
     <div class="playlist" id="byDeni-caknan">
       <!-- MUSIK-7 -->
       <div class="musik">
@@ -568,5 +638,8 @@
     <script src="script/Seandainya.js"></script>
     <!-- KALAM INEH -->
     <script src="script/Kalam-ineh.js"></script>
+
+    <!-- playlist jkt48 -->
+    <script src="script/JKT/Seventen.js"></script>
   </body>
 </html>

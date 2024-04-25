@@ -156,6 +156,14 @@ playButton7.addEventListener('click', function() {
         spotifyImage6.src = 'image/profil music/spotify.png'; // logo spotify 6
         playButton6.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play 6
 
+        // jika clik maka Fungsi musik Jkt1 pause semua
+        judulLirikJkt1.style.display = 'none'; // jusul lirik Jkt1
+        lyricsContainerJkt1.style.display = 'none'; // lirik Jkt1
+        piringanHitamJkt1.style.marginLeft = '-25px'; // piringan hitaam 6
+        audioPlayerJkt1.pause(); // musik 6
+        spotifyImageJkt1.src = 'image/profil music/spotify.png'; // logo spotify Jkt1
+        playButtonJkt1.innerHTML = '<img src="image/iocn/play.png" alt="">'; //tombol play Jkt1
+        
     } else {
         audioPlayer7.pause();
         playButton7.innerHTML = '<img src="image/iocn/play.png" alt="">'; // Ganti ikon tombol menjadi ikon play
@@ -195,8 +203,8 @@ audioPlayer7.addEventListener('ended', function() {
     progressDurationRight7.textContent = '0:00';
 
     // Simulasikan klik pada tombol dengan ID playButton5 (lanjut ke musik berikutnya)
-    const playButton1 = document.getElementById('playButton1');
+    const playButtonJkt1 = document.getElementById('playButtonJkt1');
     piringanHitam7.style.marginLeft = '-25px';
     spotifyImage7.src = 'image/profil music/spotify.png';
-    playButton1.click();
+    playButtonJkt1.click();
 });
