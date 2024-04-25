@@ -101,8 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  
-  
 
 // musik 11111111111111111111111111111111111111111111111
 const playButton1 = document.getElementById('playButton1');
