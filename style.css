@@ -96,22 +96,13 @@ input:focus {
   margin: 15px;
 }
 
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(6px); /* Posisi awal */
-  }
-  100% {
-    transform: translateX(-257%); /* Bergeser ke kiri */
-  }
-}
 .kategori button {
   flex: 0 0 auto; /* Flex items tidak fleksibel, tetap tetap pada lebar aslinya */
   white-space: nowrap; /* Mencegah teks pindah baris */
   padding: 8px 12px; /* Atur padding sesuai kebutuhan */
   margin-right: 10px;
   margin-bottom: 15px;
-  min-width: 120px; /* Tetapkan nilai min-width */
-  animation: scrollLeft 10s linear infinite alternate; /* Animasi bergeser ke kiri */
+  min-width: 100px; /* Tetapkan nilai min-width */
 }
 
 
