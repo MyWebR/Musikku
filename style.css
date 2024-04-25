@@ -65,7 +65,7 @@ input:focus {
 }
 
 .search-button:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -93,7 +93,8 @@ input:focus {
 .kategori {
   display: flex;
   overflow-x: auto;
-  margin: 15px;
+  margin: 5px;
+  padding: 10px;
 }
 
 .kategori button {
@@ -115,7 +116,7 @@ input:focus {
 }
 
 #semua:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -129,7 +130,7 @@ input:focus {
 }
 
 #indri:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -143,7 +144,7 @@ input:focus {
 
 
 #arya:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -157,7 +158,7 @@ input:focus {
 
 
 #jkt48:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -171,7 +172,7 @@ input:focus {
 
 
 #masdo:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
@@ -185,7 +186,7 @@ input:focus {
 
 
 #deni-caknan:hover {
-  box-shadow: rgba(190, 190, 190, 0.35) 1px 1px 10px;
+  box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
   color: black;
 }
