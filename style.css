@@ -102,7 +102,7 @@ input:focus {
   white-space: nowrap; /* Mencegah teks pindah baris */
   padding: 8px 12px; /* Atur padding sesuai kebutuhan */
   margin-right: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   min-width: 100px; /* Tetapkan nilai min-width */
 }
 
