@@ -10,6 +10,7 @@ body {
   font-style: normal;
   color: #f8fafc;
   background-color: #000000f0;
+  margin: 0 300px 0 300px;
 }
 
 .verifed {
@@ -81,12 +82,32 @@ input:focus {
 
 /* judul kategori */
 .judul-kategori {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin: 15px;
 }
 
 .judul-kategori p {
   font-size: 20px;
   font-weight: 500;
+}
+
+.judul-kategori a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f8fafc;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(52, 52, 52);
+}
+
+.judul-kategori a:hover {
+  box-shadow: #22c55ed0 1px 1px 10px;
+  background-color: #22c55e;
+  font-weight: 500;
+  color: black;
 }
 
 /* reques kategori */
@@ -105,8 +126,6 @@ input:focus {
   margin-bottom: 5px;
   min-width: 100px; /* Tetapkan nilai min-width */
 }
-
-
 
 #semua {
   padding: 10px;
@@ -325,3 +344,19 @@ button:hover {
   height: 55px;
   width: auto;
 }
+
+
+/* CSS untuk tablet devices (min-width: 769px dan max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+      margin: 0;
+  }/* Hide menu icon for tablet navigation */
+}
+
+/* CSS untuk mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+      margin: 0;
+  }
+}
+
