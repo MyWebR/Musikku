@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #141414;
+  color: #d7d7d7;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid rgb(52, 52, 52);
+  border-radius: 15px;
+  background-color: #1e1e1ea2;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer p {
+  color: #d7d7d7;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #141414;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid rgb(52, 52, 52);
+  border-radius: 10px;
+  color: #d7d7d7;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: none;
+  outline: none;
+  border: 2px solid #22c55e;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #141414;
+  padding: 0 5px;
+  transition: 0.3s;
+  color: #d7d7d7;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0px;
+  font-size: 13.5px;
+  font-weight: bold;
+  background-color: #141414;
+  color: #22c55e;
+}
+
+/* ini unutk ketika mengisi form dari riwayat pengisian backgrounnya tidak menjadi putih */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #141414 inset;
+  -webkit-text-fill-color: #d7d7d7;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  background-color: rgb(52, 52, 52);
+  margin-right: 5px;
+  color: #d7d7d7;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.form-group button:hover {
+  box-shadow: #22c55ed0 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
+.form-group a {
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: rgb(52, 52, 52);
+  text-decoration: none;
+  color: #d7d7d7;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.form-group a:hover {
+  box-shadow: #22c55ed0 1px 1px 10px;
+  background-color: #22c55e;
+  color: black;
+}
+
+/* CSS untuk tablet devices (min-width: 769px dan max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form-container {
+    margin: 20px;
+  }
+}
+
+/* CSS untuk mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 10px;
+  }
+}
+
+#loading {
+  margin-top: 10px;
+  display: none;
+  position: fixed;
+  overflow: visible;
+  background-color: transparent;
+  text-align: center;
+}
+
+#loading span {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #d7d7d7;
+}
+
+#loading span:after {
+  content: "...";
+  display: inline-block;
+  animation: ellipsis steps(1, end) 1s infinite;
+}
+
+@keyframes ellipsis {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}

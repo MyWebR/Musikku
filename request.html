@@ -4,97 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form to Email</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #000000f0;
-        color: #d7d7d7;
-      }
-
-      .form-container {
-        max-width: 100%;
-        margin: 0 400px;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        background-color: rgb(52, 52, 52);
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        border: none;
-        border-radius: 10px;
-        color: #d7d7d7;
-      }
-
-      .form-group input:active,
-      .form-group textarea:active {
-        border: none;
-        background-color: rgb(52, 52, 52);
-        color: #d7d7d7;
-        font-weight: bold;
-      }
-
-      .form-group button {
-        padding: 10px 20px;
-        background-color: rgb(52, 52, 52);
-        margin-right: 5px;
-        color: #d7d7d7;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        font-weight: bold;
-        font-size: 15px;
-      }
-
-      .form-group button:hover {
-        box-shadow: #22c55ed0 1px 1px 10px;
-        background-color: #22c55e;
-        color: black;
-      }
-
-      .form-group a {
-        font-size: 15px;
-        padding: 10px 20px;
-        background-color: rgb(52, 52, 52);
-        text-decoration: none;
-        color: #d7d7d7;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        font-weight: bold;
-      }
-
-      .form-group a:hover {
-        box-shadow: #22c55ed0 1px 1px 10px;
-        background-color: #22c55e;
-        color: black;
-      }
-
-      /* CSS untuk tablet devices (min-width: 769px dan max-width: 1024px) */
-      @media (min-width: 769px) and (max-width: 1024px) {
-        .form-container {
-          margin: 0;
-        }
-      }
-
-      /* CSS untuk mobile devices (max-width: 768px) */
-      @media (max-width: 768px) {
-        .form-container {
-          margin: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="request.css" />
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       (function () {
@@ -102,52 +12,74 @@
       })();
     </script>
   </head>
-
   <body>
     <div class="form-container">
-      <h1>Request Music</h1>
+      <h1>Musikku</h1>
+      <p>
+        Request musik favoritmu di <span style="color: #22c55e">Musikku</span>
+      </p>
       <form id="contactForm">
         <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required placeholder=" " />
+          <label for="name">Name</label>
         </div>
         <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder=" "
+          />
+          <label for="email">Email</label>
         </div>
         <div class="form-group">
-          <label for="message">Request Musik:</label>
           <textarea
             id="message"
             name="message"
-            placeholder="Music: Your Music  Request | By: Artist"
             required
+            placeholder=" "
           ></textarea>
+          <label for="message">Request Music</label>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="border: none">
           <button type="submit">Send Request</button>
           <a href="index.html">Back</a>
         </div>
       </form>
     </div>
 
+    <div id="loading"><span>Loading</span></div>
+    <footer>
+      <p id="copyright">&copy; <span id="year"></span> Restu Ardiansyah</p>
+    </footer>
     <script>
+      // copyright
+      const yearElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+
+      // email
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+
+          const loading = document.getElementById("loading");
+          loading.style.display = "block";
 
           const serviceID = "23h42d"; // Ganti dengan Service ID Anda
           const templateID = "123hj534"; // Ganti dengan Template ID Anda
 
           emailjs.sendForm(serviceID, templateID, this).then(
             function (response) {
+              loading.style.display = "none";
               console.log("SUCCESS!", response.status, response.text);
               alert("Music Request Sent Successfully!");
-              alert("Click oke to back");
-              window.location.href = "index.html"; // Mengarahkan ke halaman index.html setelah email terkirim
+              document.getElementById("contactForm").reset();
             },
             function (error) {
+              loading.style.display = "none";
               console.log("FAILED...", error);
               alert(
                 "Oops there was an error in the server, wait a moment to request the music again!"
