@@ -136,12 +136,9 @@ textarea:-webkit-autofill:focus {
 }
 
 #loading {
-  margin-top: 10px;
   display: none;
-  position: fixed;
-  overflow: visible;
   background-color: transparent;
-  text-align: center;
+  margin-top: 20px;
 }
 
 #loading span {
@@ -175,5 +172,5 @@ textarea:-webkit-autofill:focus {
 }
 
 footer {
-     margin-top: 100px;
+  margin-top: 100px;
 }

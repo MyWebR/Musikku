@@ -140,7 +140,6 @@ input:focus {
   color: black;
 }
 
-
 #indri {
   padding: 10px;
   background-color: rgb(52, 52, 52);
@@ -161,7 +160,6 @@ input:focus {
   font-weight: bold;
 }
 
-
 #arya:hover {
   box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
@@ -174,7 +172,6 @@ input:focus {
   color: white;
   font-weight: bold;
 }
-
 
 #jkt48:hover {
   box-shadow: #22c55ed0 1px 1px 10px;
@@ -189,7 +186,6 @@ input:focus {
   font-weight: bold;
 }
 
-
 #masdo:hover {
   box-shadow: #22c55ed0 1px 1px 10px;
   background-color: #22c55e;
@@ -202,7 +198,6 @@ input:focus {
   color: white;
   font-weight: bold;
 }
-
 
 #deni-caknan:hover {
   box-shadow: #22c55ed0 1px 1px 10px;
@@ -345,18 +340,16 @@ button:hover {
   width: auto;
 }
 
-
 /* CSS untuk tablet devices (min-width: 769px dan max-width: 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-      margin: 0;
-  }/* Hide menu icon for tablet navigation */
+    margin: 0;
+  } /* Hide menu icon for tablet navigation */
 }
 
 /* CSS untuk mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   body {
-      margin: 0;
+    margin: 0;
   }
 }
-
