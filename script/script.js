@@ -270,3 +270,16 @@ audioPlayer1.addEventListener('ended', function() {
     spotifyImage1.src = 'image/profil music/spotify.png';
     playButton2.click();
 });
+
+
+// supaya halaman tidak bisa di klik kanan pada komputer, maupun di tekan lama pada mobile
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+  
+  document.querySelectorAll('.disabled').forEach(element => {
+    element.style.pointerEvents = 'none';
+  });
+
+
+  
