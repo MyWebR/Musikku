@@ -423,6 +423,9 @@ button:hover {
   body {
     margin: 0;
   }
+  .autocomplete-container {
+    margin:15px 25px 0 15px;
+  }
 }
 
 * {
