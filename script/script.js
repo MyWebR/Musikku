@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         suggestionItem.textContent = music;
         suggestionsContainer.appendChild(suggestionItem);
         segitiga.style.display = "block";
+        document.getElementById("byRestu").style.display = "block";
 
         suggestionItem.addEventListener("click", () => {
           searchInput.value = music;
