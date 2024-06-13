@@ -423,8 +423,12 @@ button:hover {
   body {
     margin: 0;
   }
-  .autocomplete-container {
-    margin:15px 25px 0 15px;
+  .search-wrapper input {
+    padding: 10px;
+  }
+
+  #search-btn {
+    padding: 10px 15px;
   }
 }
 
