@@ -13,6 +13,10 @@ body {
   margin: 0 300px 0 300px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .verifed {
   display: flex;
   align-items: center;
@@ -29,52 +33,118 @@ body {
   width: auto;
 }
 
-/* cari musik */
-.search-container {
+/* search */
+.autocomplete-container {
   margin: 15px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
-input {
-  color: white;
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+}
+
+.search-wrapper input {
+  height: 100%;
+  color: #f8fafc;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid rgb(52, 52, 52);
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgb(52, 52, 52);
+  margin-right: 10px;
+  flex-grow: 1; /* Add this line */
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
 
-input:focus {
-  color: #22c55e;
+.search-wrapper input:focus {
+  border-bottom: none;
+  outline: none;
   border: 2px solid #22c55e;
 }
 
-.search-input {
-  height: 30px;
-  flex-grow: 1; /* Input akan mengisi sisa ruang yang tersedia */
-  padding: 8px;
-  border: 2px solid rgb(52, 52, 52);
-  background-color: rgb(52, 52, 52);
+#search-btn {
+  height: 100%;
+  width: auto;
+  padding:15px 20px;
   border-radius: 5px;
-}
-
-.search-button {
-  height: 50px;
   background-color: rgb(52, 52, 52);
-  border: none;
-  padding: 8px 20px 8px 20px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
-.search-button:hover {
-  box-shadow: #22c55ed0 1px 1px 10px;
-  background-color: #22c55e;
-  color: black;
-}
-
-.search-button img {
-  width: 20px;
+.search-wrapper img {
   height: 20px;
+  width: auto;
 }
+
+#search-btn:hover {
+  background-color: #22c55e;
+  box-shadow: #22c55ed0 1px 1px 10px;
+}
+
+.segitiga {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(52, 52, 52);
+  rotate: 45deg;
+  margin-left: 20px;
+}
+
+.suggestions {
+  position: absolute;
+  width: 260px;
+  border-top: none;
+  background-color: rgb(52, 52, 52);
+  max-height: 150px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px #22c55ed0 1px 1px 10px;
+  z-index: 1000;
+  margin-top: 15px;
+border-radius: 10px;
+border-bottom: 2px rgb(255, 255, 255);
+}
+
+.suggestions div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  font-weight: bold;
+  background-color: #22c55e;
+  color: #000000f0;
+  box-shadow: #22c55ed0 1px 1px 10px;
+}
+
+.alert {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #141414 inset;
+  -webkit-text-fill-color: #d7d7d7;
+}
+
+
+/* title */
 
 .playlist {
   margin: 15px;
@@ -125,6 +195,7 @@ input:focus {
   margin-right: 10px;
   margin-bottom: 5px;
   min-width: 100px; /* Tetapkan nilai min-width */
+  cursor: pointer;
 }
 
 #semua {
@@ -353,7 +424,6 @@ button:hover {
     margin: 0;
   }
 }
-
 
 * {
   -webkit-touch-callout: none;

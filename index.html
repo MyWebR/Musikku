@@ -28,11 +28,16 @@
   </head>
   <body>
     <!-- search container -->
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Cari Musik..." />
-      <button class="search-button">
-        <img src="image/iocn/search.png" alt="Search" />
-      </button>
+    <div class="autocomplete-container">
+      <div class="search-wrapper">
+        <input type="text" id="search" placeholder="Cari musik..." />
+        <button id="search-btn">
+          <img src="image/iocn/search.png" alt="" />
+        </button>
+      </div>
+      <div class="segitiga" id="segitiga"></div>
+      <div id="suggestions" class="suggestions"></div>
+      <div id="alert" class="alert"></div>
     </div>
 
     <!-- judul playlist -->
@@ -53,7 +58,7 @@
     <!-- musikku -->
     <div class="playlist" id="byRestu">
       <!-- musik-1 -->
-      <div class="musik">
+      <div class="musik" id="music-Style">
         <!-- profil musik -->
         <div class="profil-musik">
           <img
@@ -122,7 +127,7 @@
       </div>
 
       <!-- musik-2 -->
-      <div class="musik">
+      <div class="musik" id="music-Lovers Rock">
         <!-- profil musik -->
         <div class="profil-musik">
           <img src="image/profil music/lovers-rock.jpg" alt="" id="profil2" />
@@ -187,7 +192,7 @@
       </div>
 
       <!-- musik-3 -->
-      <div class="musik">
+      <div class="musik" id="music-End Of Beginning">
         <!-- profil musik -->
         <div class="profil-musik">
           <img
@@ -257,7 +262,7 @@
       </div>
 
       <!-- MUSIK-4 -->
-      <div class="musik">
+      <div class="musik" id="music-On Melancholy Hill">
         <!-- profil musik -->
         <div class="profil-musik">
           <img
@@ -328,7 +333,7 @@
 
     <!-- by indri-->
     <div class="playlist" id="byIndri">
-      <div class="musik">
+      <div class="musik" id="music-Why Can't I">
         <!-- profil musik -->
         <div class="profil-musik">
           <img src="image/profil music/why can't i.jpg" alt="" id="profil5" />
@@ -395,7 +400,7 @@
 
     <!-- by arya -->
     <div class="playlist" id="byArya">
-      <div class="musik">
+      <div class="musik" id="music-Seandainya">
         <!-- profil musik -->
         <div class="profil-musik">
           <img src="image/profil music/viera.jpeg" alt="" id="profil6" />
@@ -465,7 +470,7 @@
 
     <div class="playlist" id="byRestu-2">
       <!-- MUSIK-7 -->
-      <div class="musik">
+      <div class="musik" id="music-Kalam Ineh">
         <!-- profil musik -->
         <div class="profil-musik">
           <img
@@ -537,7 +542,7 @@
     <!-- playlist jkt48 -->
     <div class="playlist" id="byJkt48">
       <!-- MUSIK-jk1 -->
-      <div class="musik">
+      <div class="musik" id="music-Seventeen">
         <!-- profil musik -->
         <div class="profil-musik">
           <img src="image/profil music/Seventen.jpg" alt="" id="profilJkt1" />
@@ -612,7 +617,7 @@
     <div class="playlist" id="byMasdo">
       <!-- MUSIK-7 -->
       <div class="musik">
-        <h2>PLAYLIST MASDO BELUM TERSEDIA</h2>
+        <h2>COMING SOON</h2>
       </div>
     </div>
 
@@ -620,7 +625,7 @@
     <div class="playlist" id="byDeni-caknan">
       <!-- MUSIK-7 -->
       <div class="musik">
-        <h2>PLAYLIST DENI CAKNAN BELUM TERSEDIA</h2>
+        <h2>COMING SOON</h2>
       </div>
     </div>
 
